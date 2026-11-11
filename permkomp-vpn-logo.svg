@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <defs>
+    <!-- Градиент фона -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#191B1D"/>
+      <stop offset="100%" stop-color="#121416"/>
+    </linearGradient>
+
+    <!-- Синий градиент для диагональной линии логотипа -->
+    <linearGradient id="slashGrad" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2998FF"/>
+      <stop offset="50%" stop-color="#0E72F5"/>
+      <stop offset="100%" stop-color="#0055D4"/>
+    </linearGradient>
+
+    <!-- Синий градиент для текста Komp -->
+    <linearGradient id="kompGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A66E8"/>
+      <stop offset="100%" stop-color="#2693FF"/>
+    </linearGradient>
+
+    <!-- Обрезка со скругленными углами -->
+    <clipPath id="roundedCorners">
+      <rect x="0" y="0" width="1000" height="1000" rx="185" ry="185"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#roundedCorners)">
+    <!-- Фон -->
+    <rect x="0" y="0" width="1000" height="1000" fill="url(#bgGrad)"/>
+
+    <!-- Монограмма PK -->
+    <g id="pk-monogram">
+      <!-- Белая часть буквы P -->
+      <path d="M 268 195 
+               L 478 195 
+               C 535 195, 578 232, 578 286 
+               C 578 300, 574 313, 568 325 
+               L 504 388 
+               C 495 391, 486 392, 476 392 
+               L 342 392 
+               L 342 545 
+               L 268 545 
+               Z 
+               M 342 260 
+               L 342 327 
+               L 466 327 
+               C 491 327, 506 312, 506 293.5 
+               C 506 275, 491 260, 466 260 
+               Z" 
+            fill="#FFFFFF" fill-rule="evenodd"/>
+
+      <!-- Нижняя правая ножка буквы K (белая) -->
+      <path d="M 556 416 
+               L 610 363 
+               L 822 545 
+               L 725 545 
+               Z" 
+            fill="#FFFFFF"/>
+
+      <!-- Синяя диагональная полоса -->
+      <path d="M 730 195 
+               L 822 195 
+               L 462 545 
+               L 370 545 
+               Z" 
+            fill="url(#slashGrad)"/>
+    </g>
+
+    <!-- Текст PermKomp -->
+    <g id="brand-text" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="148" letter-spacing="-2">
+      <text x="492" y="728" text-anchor="end" fill="#FFFFFF">Perm</text>
+      <text x="506" y="728" text-anchor="start" fill="url(#kompGrad)">Komp</text>
+    </g>
+
+    <!-- Нижний блок: линии и VPN -->
+    <g id="vpn-subtext">
+      <!-- Левая синяя линия -->
+      <rect x="184" y="803" width="168" height="10" rx="5" fill="#187CF2"/>
+      
+      <!-- Надпись V P N -->
+      <text x="503" y="832" text-anchor="middle" fill="#FFFFFF" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="68" letter-spacing="16">VPN</text>
+      
+      <!-- Правая синяя линия -->
+      <rect x="652" y="803" width="168" height="10" rx="5" fill="#187CF2"/>
+    </g>
+  </g>
+</svg>
